@@ -1,0 +1,39 @@
+name: Rebuild search indexes
+
+on:
+  schedule:
+    - cron: "17 7 * * *"   # nightly, ~2-3 AM US Eastern
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths:
+      - "scripts/**"
+      - ".github/workflows/rebuild-index.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install beautifulsoup4
+      - name: Qumulex KB
+        run: python scripts/build_qumulex_index.py
+      - name: Rosslare KB
+        run: python scripts/build_rosslare_index.py
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- data; then
+            echo "No index changes."
+          else
+            git config user.name "qxr-index-bot"
+            git config user.email "qxr-index-bot@users.noreply.github.com"
+            git add data
+            git commit -m "Nightly search index rebuild"
+            git push
+          fi
