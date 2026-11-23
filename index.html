@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>QXR Security Support Hub</title>
+<style>
+.sg-item{display:block;padding:12px 16px;border-top:1px solid #EDF0F4;color:#0F1B2D;text-decoration:none;cursor:pointer}
+.sg-item:first-child{border-top:0}
+.sg-item[aria-selected=true],.sg-item:hover{background:#EEF3FC;text-decoration:none;color:#0F1B2D}
+.sg-t{font-weight:600;font-size:15px;line-height:1.35}
+.sg-m{display:flex;gap:8px;align-items:center;margin-top:4px;font-size:12.5px;color:#4A5568}
+.sg-tag{font-weight:600;padding:1px 7px;border-radius:999px;color:#fff;background:#1A56C4;font-size:11.5px}
+.sg-s{font-size:13px;color:#4A5568;margin-top:4px;line-height:1.4}
+.sg-item mark{background:#FFE9A8;color:inherit;padding:0 1px;border-radius:2px}
+.sg-foot{padding:10px 16px;font-size:13px;color:#4A5568;background:#F5F7FA;border-top:1px solid #EDF0F4}
+</style>
+</head>
+<body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F5F7FA}
+a{color:#1A56C4;text-decoration:none}a:hover{color:#0F3A8A;text-decoration:underline}
+</style>
+<div style="font-family: Inter, system-ui, sans-serif; color: #0F1B2D; background: #F5F7FA; min-height: 100vh">
+
+<header style="background: #0F1B2D; color: #FFFFFF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 16px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+<div style="display: flex; align-items: center; gap: 12px">
+<div style="width: 36px; height: 36px; border-radius: 8px; background: #FFFFFF; color: #0F1B2D; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px">QXR</div>
+<span style="font-weight: 600; font-size: 17px">QXR Security Support</span>
+</div>
+<nav aria-label="Support sections" style="display: flex; flex-wrap: wrap; gap: 24px; font-size: 15px">
+<a href="#qumulex" style="color: #D6DEEA">Qumulex</a>
+<a href="#rosslare" style="color: #D6DEEA">Rosslare</a>
+<a href="#downloads" style="color: #D6DEEA">Downloads</a>
+<a href="#" style="color: #D6DEEA">Knowledge base</a>
+<a href="#contact" style="display: inline-flex; align-items: center; height: 36px; padding: 0 14px; border-radius: 8px; background: #FFFFFF; color: #0F1B2D; font-weight: 600">Contact support</a>
+</nav>
+</div>
+</header>
+
+<section style="background: #13233A; color: #FFFFFF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 56px 24px 88px; display: flex; flex-direction: column; align-items: center; gap: 18px; text-align: center">
+<h1 style="margin: 0; font-size: 48px; line-height: 1.1; font-weight: 700; letter-spacing: -0.02em">How can we help?</h1>
+<p style="margin: 0; font-size: 18px; line-height: 1.5; color: #D6DEEA; max-width: 680px">Support for Qumulex cloud video and access control, and Rosslare controllers, readers and AxTrax software, in one place.</p>
+<form id="hub-form" role="search" style="position: relative; text-align: left; display: flex; flex-wrap: wrap; gap: 8px; width: 100%; max-width: 720px; margin-top: 8px">
+<label for="hub-search" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Search all support articles</label>
+<label for="hub-scope" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Knowledge base to search</label>
+<select id="hub-scope" style="height: 52px; padding: 0 12px; border-radius: 10px; border: 1px solid #3A4F6B; background: #FFFFFF; color: #0F1B2D; font-size: 16px; font-weight: 600; font-family: inherit"><option value="qumulex">Qumulex KB</option><option value="rosslare">Rosslare KB</option></select>
+<input id="hub-search" type="search" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="hub-suggest" placeholder="Search support articles" style="flex: 1 1 320px; min-width: 0; height: 52px; padding: 0 16px; border-radius: 10px; border: 1px solid #3A4F6B; background: #FFFFFF; color: #0F1B2D; font-size: 16px; font-family: inherit; box-sizing: border-box">
+<button type="submit" style="height: 52px; padding: 0 24px; border-radius: 10px; border: 0; background: #1A56C4; color: #FFFFFF; font-size: 16px; font-weight: 600; font-family: inherit; cursor: pointer">Search</button>
+<div id="hub-suggest" role="listbox" aria-label="Matching articles" hidden style="position: absolute; left: 0; right: 0; top: 60px; z-index: 20; background: #FFFFFF; color: #0F1B2D; border: 1px solid #DCE2EA; border-radius: 12px; box-shadow: 0 12px 32px rgba(15,27,45,0.22); max-height: 460px; overflow-y: auto; text-align: left"></div>
+</form>
+</div>
+</section>
+
+<main style="max-width: 1200px; margin: 0 auto; padding: 0 24px 64px; display: flex; flex-direction: column; gap: 56px">
+
+<section aria-label="Choose a product" style="margin-top: -48px; display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 20px">
+
+<div id="qumulex" style="display: flex; flex-direction: column; gap: 18px; padding: 28px; background: #FFFFFF; border: 1px solid #DCE2EA; border-top: 4px solid #1A56C4; border-radius: 14px; box-shadow: 0 4px 16px rgba(15,27,45,0.08)">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<h2 style="margin: 0; font-size: 28px; font-weight: 700">Qumulex</h2>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A5568">Unified video and access control on cloud-connected servers and gateways.</p>
+</div>
+<ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column">
+<li style="border-top: 1px solid #EDF0F4"><a href="#" style="display: flex; justify-content: space-between; align-items: center; min-height: 48px; font-weight: 600; font-size: 16px">Quickstart guides<span aria-hidden="true">→</span></a></li>
+<li style="border-top: 1px solid #EDF0F4"><a href="#" style="display: flex; justify-content: space-between; align-items: center; min-height: 48px; font-weight: 600; font-size: 16px">QxControl user manual<span aria-hidden="true">→</span></a></li>
+<li style="border-top: 1px solid #EDF0F4"><a href="#" style="display: flex; justify-content: space-between; align-items: center; min-height: 48px; font-weight: 600; font-size: 16px">Troubleshooting<span aria-hidden="true">→</span></a></li>
+<li style="border-top: 1px solid #EDF0F4"><a href="#" style="display: flex; justify-content: space-between; align-items: center; min-height: 48px; font-weight: 600; font-size: 16px">Servers, gateways and drives<span aria-hidden="true">→</span></a></li>
+<li style="border-top: 1px solid #EDF0F4; border-bottom: 1px solid #EDF0F4"><a href="#" style="display: flex; justify-content: space-between; align-items: center; min-height: 48px; font-weight: 600; font-size: 16px">Software and release notes<span aria-hidden="true">→</span></a></li>
+</ul>
+<a href="#" style="display: inline-flex; align-self: flex-start; align-items: center; height: 44px; padding: 0 18px; border-radius: 8px; background: #1A56C4; color: #FFFFFF; font-weight: 600; font-size: 15px">Go to Qumulex support</a>
+</div>
+
+<div id="rosslare" style="display: flex; flex-direction: column; gap: 18px; padding: 28px; background: #FFFFFF; border: 1px solid #DCE2EA; border-top: 4px solid #B4232C; border-radius: 14px; box-shadow: 0 4px 16px rgba(15,27,45,0.08)">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<h2 style="margin: 0; font-size: 28px; font-weight: 700">Rosslare</h2>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4A5568">AC-x25IP controllers, readers and credentials, and AxTraxPro.</p>
+</div>
+<ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column">
+<li style="border-top: 1px solid #EDF0F4"><a href="#" style="display: flex; justify-content: space-between; align-items: center; min-height: 48px; font-weight: 600; font-size: 16px">AxTraxPro downloads<span aria-hidden="true">→</span></a></li>
+<li style="border-top: 1px solid #EDF0F4"><a href="#" style="display: flex; justify-content: space-between; align-items: center; min-height: 48px; font-weight: 600; font-size: 16px">Controller and reader firmware<span aria-hidden="true">→</span></a></li>
+<li style="border-top: 1px solid #EDF0F4"><a href="#" style="display: flex; justify-content: space-between; align-items: center; min-height: 48px; font-weight: 600; font-size: 16px">Manuals and quickstarts<span aria-hidden="true">→</span></a></li>
+<li style="border-top: 1px solid #EDF0F4"><a href="#" style="display: flex; justify-content: space-between; align-items: center; min-height: 48px; font-weight: 600; font-size: 16px">Card and reader compatibility<span aria-hidden="true">→</span></a></li>
+<li style="border-top: 1px solid #EDF0F4; border-bottom: 1px solid #EDF0F4"><a href="#" style="display: flex; justify-content: space-between; align-items: center; min-height: 48px; font-weight: 600; font-size: 16px">Returns and RMA<span aria-hidden="true">→</span></a></li>
+</ul>
+<a href="rosslare.html" style="display: inline-flex; align-self: flex-start; align-items: center; height: 44px; padding: 0 18px; border-radius: 8px; background: #B4232C; color: #FFFFFF; font-weight: 600; font-size: 15px">Go to Rosslare support</a>
+</div>
+</section>
+
+<section aria-labelledby="better" style="display: flex; flex-direction: column; gap: 16px; padding: 32px; background: #EAF1FD; border-radius: 16px">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<h2 id="better" style="margin: 0; font-size: 24px; font-weight: 700">Better together: Rosslare + Qumulex</h2>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #2B3A52; max-width: 760px">Running Rosslare hardware with Qumulex, or planning a move? Start here. AxTraxNG downloads end <strong>12/31/2026</strong> and support ends <strong>12/31/2027</strong>.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px">
+<a href="#" style="display: flex; flex-direction: column; gap: 6px; padding: 20px; background: #FFFFFF; border-radius: 12px; color: #0F1B2D">
+<span style="font-weight: 700; font-size: 17px">AxTraxNG end of life: your options</span>
+<span style="font-size: 14px; line-height: 1.5; color: #4A5568">Upgrade to AxTraxPro or move to Qumulex, and why you'd pick each.</span>
+</a>
+<a href="#" style="display: flex; flex-direction: column; gap: 6px; padding: 20px; background: #FFFFFF; border-radius: 12px; color: #0F1B2D">
+<span style="font-weight: 700; font-size: 17px">Converting AxTraxNG to Qumulex</span>
+<span style="font-size: 14px; line-height: 1.5; color: #4A5568">Export users, map groups, and import them into Qumulex.</span>
+</a>
+<a href="#" style="display: flex; flex-direction: column; gap: 6px; padding: 20px; background: #FFFFFF; border-radius: 12px; color: #0F1B2D">
+<span style="font-weight: 700; font-size: 17px">Rosslare readers on Qumulex</span>
+<span style="font-size: 14px; line-height: 1.5; color: #4A5568">Wiring and setting up OSDP and Wiegand readers on Mercury panels.</span>
+</a>
+</div>
+</section>
+
+<section aria-labelledby="popular" style="display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px">
+<h2 id="popular" style="margin: 0; font-size: 26px; font-weight: 700">Popular articles</h2>
+<div role="group" aria-label="Filter articles by product" style="display: flex; gap: 6px; padding: 4px; background: #E6EAF0; border-radius: 10px">
+<span id="tabs" style="display:contents"></span>
+</div>
+</div>
+<ol id="arts" style="margin: 0; padding: 0; list-style: none; background: #FFFFFF; border: 1px solid #DCE2EA; border-radius: 12px">
+
+</ol>
+<a href="#" style="font-weight: 600; font-size: 15px">Browse the full knowledge base →</a>
+</section>
+
+<section id="downloads" aria-labelledby="dl" style="display: flex; flex-direction: column; gap: 16px">
+<h2 id="dl" style="margin: 0; font-size: 26px; font-weight: 700">Downloads</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px">
+<a href="#" style="display: flex; flex-direction: column; gap: 6px; padding: 20px; background: #FFFFFF; border: 1px solid #DCE2EA; border-radius: 12px; color: #0F1B2D"><span style="font-size: 12px; font-weight: 600; color: #1A56C4; text-transform: uppercase; letter-spacing: 0.06em">Qumulex</span><span style="font-weight: 700; font-size: 17px">Client software</span><span style="font-size: 14px; color: #4A5568">Latest: [vX.X]</span></a>
+<a href="#" style="display: flex; flex-direction: column; gap: 6px; padding: 20px; background: #FFFFFF; border: 1px solid #DCE2EA; border-radius: 12px; color: #0F1B2D"><span style="font-size: 12px; font-weight: 600; color: #1A56C4; text-transform: uppercase; letter-spacing: 0.06em">Qumulex</span><span style="font-weight: 700; font-size: 17px">Quickstart guides (PDF)</span><span style="font-size: 14px; color: #4A5568">Version and date on each</span></a>
+<a href="#" style="display: flex; flex-direction: column; gap: 6px; padding: 20px; background: #FFFFFF; border: 1px solid #DCE2EA; border-radius: 12px; color: #0F1B2D"><span style="font-size: 12px; font-weight: 600; color: #B4232C; text-transform: uppercase; letter-spacing: 0.06em">Rosslare</span><span style="font-weight: 700; font-size: 17px">AxTraxPro</span><span style="font-size: 14px; color: #4A5568">Current: 28.0.5</span></a>
+<a href="#" style="display: flex; flex-direction: column; gap: 6px; padding: 20px; background: #FFFFFF; border: 1px solid #DCE2EA; border-radius: 12px; color: #0F1B2D"><span style="font-size: 12px; font-weight: 600; color: #B4232C; text-transform: uppercase; letter-spacing: 0.06em">Rosslare · Legacy</span><span style="font-weight: 700; font-size: 17px">AxTraxNG</span><span style="font-size: 14px; color: #4A5568">27.7.1.20 · available until 12/31/2026</span></a>
+<a href="#" style="display: flex; flex-direction: column; gap: 6px; padding: 20px; background: #FFFFFF; border: 1px solid #DCE2EA; border-radius: 12px; color: #0F1B2D"><span style="font-size: 12px; font-weight: 600; color: #B4232C; text-transform: uppercase; letter-spacing: 0.06em">Rosslare</span><span style="font-weight: 700; font-size: 17px">Firmware and utilities</span><span style="font-size: 14px; color: #4A5568">Controllers, readers, RS-485 updater</span></a>
+</div>
+</section>
+
+<section aria-labelledby="tools" style="display: flex; flex-direction: column; gap: 16px">
+<h2 id="tools" style="margin: 0; font-size: 26px; font-weight: 700">Online tools</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px">
+<a href="https://qxr-repository.github.io/rosslare-compatibility-check/" target="_blank" rel="noopener" style="display: flex; flex-direction: column; gap: 8px; padding: 24px; background: #FFFFFF; border: 1px solid #DCE2EA; border-radius: 12px; color: #0F1B2D"><span style="font-weight: 700; font-size: 18px">Card and reader compatibility checker</span><span style="font-size: 14px; line-height: 1.5; color: #4A5568">Check a card, reader or panel part number before you order.</span><span style="font-size: 15px; font-weight: 600; color: #1A56C4">Open checker →</span></a>
+<a href="https://qxr-repository.github.io/qr-credential-generator/" target="_blank" rel="noopener" style="display: flex; flex-direction: column; gap: 8px; padding: 24px; background: #FFFFFF; border: 1px solid #DCE2EA; border-radius: 12px; color: #0F1B2D"><span style="font-weight: 700; font-size: 18px">QR credential generator</span><span style="font-size: 14px; line-height: 1.5; color: #4A5568">Make 26-bit QR codes for AY-x30QR readers, single or batch.</span><span style="font-size: 15px; font-weight: 600; color: #1A56C4">Open generator →</span></a>
+</div>
+</section>
+
+<section id="contact" aria-labelledby="ct" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; padding: 32px; background: #0F1B2D; color: #FFFFFF; border-radius: 16px">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<h2 id="ct" style="margin: 0; font-size: 24px; font-weight: 700">Talk to support</h2>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #D6DEEA">North America technical support for Qumulex and Rosslare. [HOURS] ET.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 13px; font-weight: 600; color: #B8C4D6; text-transform: uppercase; letter-spacing: 0.06em">Qumulex</span>
+<a href="#" style="color: #FFFFFF; font-weight: 600; font-size: 17px">[PHONE]</a>
+<a href="#" style="color: #FFFFFF; font-weight: 600; font-size: 17px">[SUPPORT EMAIL]</a>
+<span style="font-size: 13px; font-weight: 600; color: #B8C4D6; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 10px">Rosslare</span>
+<a href="tel:+18666321101" style="color: #FFFFFF; font-weight: 600; font-size: 17px">866-632-1101</a>
+<a href="mailto:support.na@rosslaresecurity.com" style="color: #FFFFFF; font-weight: 600; font-size: 17px">support.na@rosslaresecurity.com</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; align-items: flex-start">
+<a href="#" style="display: inline-flex; align-items: center; height: 44px; padding: 0 18px; border-radius: 8px; background: #FFFFFF; color: #0F1B2D; font-weight: 600; font-size: 15px">Submit a ticket</a>
+<a href="#" style="display: inline-flex; align-items: center; height: 44px; padding: 0 18px; border-radius: 8px; border: 1px solid #5E7391; color: #FFFFFF; font-weight: 600; font-size: 15px">Start a remote session (TeamViewer QS)</a>
+<a href="#" style="display: inline-flex; align-items: center; height: 44px; padding: 0 18px; border-radius: 8px; border: 1px solid #5E7391; color: #FFFFFF; font-weight: 600; font-size: 15px">Register for tech support</a>
+<a href="#" style="display: inline-flex; align-items: center; height: 44px; padding: 0 18px; border-radius: 8px; border: 1px solid #5E7391; color: #FFFFFF; font-weight: 600; font-size: 15px">Request a Rosslare RMA</a>
+</div>
+</section>
+
+</main>
+
+<footer style="border-top: 1px solid #DCE2EA; background: #FFFFFF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 14px; color: #4A5568">
+<span>QXR Security · Qumulex and Rosslare</span>
+<div style="display: flex; flex-wrap: wrap; gap: 20px"><a href="#">qumulex.com</a><a href="#">rosslaresecurity.com</a><a href="#">Knowledge base</a></div>
+</div>
+</footer>
+
+</div>
+<script>
+var QX='#1A56C4',RS='#B4232C';
+var all=[['Replacing a failed recording drive on a Qumulex gateway','Qumulex','Guide'],['Reader reports a card serial number instead of facility code + card number','Rosslare','Troubleshooting'],['Server or gateway shows offline','Qumulex','Troubleshooting'],['AC-825IP quickstart: network setup and first connection','Rosslare','Guide'],['Adding doors and readers in QxControl','Qumulex','Guide'],['AY-U920 readers not working with the BLE-Admin app','Rosslare','Troubleshooting'],['Credential changes not syncing to a Mercury panel','Qumulex','Troubleshooting'],['Updating RS-485 reader firmware','Rosslare','Guide']];
+var filter='all';
+function render(){
+ var t=document.getElementById('tabs');t.innerHTML='';
+ [['all','All'],['qumulex','Qumulex'],['rosslare','Rosslare']].forEach(function(p){var on=filter===p[0];var b=document.createElement('button');b.type='button';b.textContent=p[1];b.setAttribute('aria-pressed',on);
+ b.style.cssText='min-height:40px;padding:0 16px;border:0;border-radius:8px;font-family:inherit;font-size:15px;font-weight:600;cursor:pointer;background:'+(on?'#FFFFFF':'transparent')+';color:'+(on?'#0F1B2D':'#3B4A60')+';box-shadow:'+(on?'0 1px 3px rgba(15,27,45,0.15)':'none');
+ b.onclick=function(){filter=p[0];render();};t.appendChild(b);});
+ var ol=document.getElementById('arts');ol.innerHTML='';
+ all.filter(function(a){return filter==='all'||a[1].toLowerCase()===filter;}).slice(0,6).forEach(function(a,i){
+ var li=document.createElement('li');li.style.cssText='display:flex;align-items:flex-start;gap:16px;padding:16px 20px;border-top:'+(i?'1px solid #EDF0F4':'0');
+ li.innerHTML='<span style="font-weight:700;color:#7A8699;width:20px;padding-top:2px">'+(i+1)+'</span><div style="display:flex;flex-direction:column;gap:6px;flex:1;min-width:0"><a href="#" style="font-weight:600;font-size:16px">'+a[0]+'</a><div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:13px;color:#4A5568"><span style="font-weight:600;padding:2px 8px;border-radius:999px;color:#fff;background:'+(a[1]==='Qumulex'?QX:RS)+'">'+a[1]+'</span><span>'+a[2]+'</span></div></div>';
+ ol.appendChild(li);});
+}
+render();
+document.getElementById('hub-form').addEventListener('submit',function(e){e.preventDefault();
+ var q=document.getElementById('hub-search').value.trim();var url;
+ if(document.getElementById('hub-scope').value==='rosslare'){var b='https://support.rosslaresecurity.com/portal/en/kb/';url=q?b+'search/'+encodeURIComponent(q):b+'knowledge-base';window.open(url,'_blank','noopener');}
+ else{url=q?'https://www.qumulex.com/kb/kb-search-results?q='+encodeURIComponent(q)+'&type=KNOWLEDGE_ARTICLE&groupId=199600904293':'https://www.qumulex.com/kb';window.location.href=url;}
+});
+</script>
+<script>
+(function(){
+var input=document.getElementById('hub-search'),box=document.getElementById('hub-suggest'),scope=document.getElementById('hub-scope');
+var IDX=[];
+function load(url,p){return fetch(url).then(function(r){return r.json();}).then(function(d){d.forEach(function(a){a.p=p;a._t=a.t.toLowerCase();a._c=a.c.toLowerCase();a._d=a.d.toLowerCase();a._b=a.b.toLowerCase();IDX.push(a);});}).catch(function(e){console.warn('Index load failed',url,e);});}
+Promise.all([load('data/qumulex-kb-index.json','Qumulex'),load('data/rosslare-kb-index.json','Rosslare')]).then(function(){if(document.activeElement===input&&input.value.trim())render(input.value.trim());});
+var results=[],active=-1;
+function esc(x){return x.replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function hl(text,toks){var h=esc(text);toks.forEach(function(t){if(t.length<2)return;h=h.replace(new RegExp('('+t.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','gi'),'<mark>$1</mark>');});return h;}
+function snippet(a,toks){var i=-1;for(var k=0;k<toks.length&&i<0;k++){i=a._b.indexOf(toks[k]);}
+ if(i<0)return a.d||a.b.slice(0,140);var st=Math.max(0,i-50);return(st?'…':'')+a.b.slice(st,st+150)+'…';}
+function score(a,toks){var s=0;for(var i=0;i<toks.length;i++){var t=toks[i],m=0;
+ if(a._t.indexOf(t)===0)m=12;else if(new RegExp('\\b'+t.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).test(a._t))m=10;else if(a._t.indexOf(t)>=0)m=6;
+ else if(a._c.indexOf(t)>=0)m=4;else if(a._d.indexOf(t)>=0)m=3;else if(a._b.indexOf(t)>=0)m=1;
+ if(!m)return 0;s+=m;}return s;}
+function close(){box.hidden=true;input.setAttribute('aria-expanded','false');active=-1;}
+function render(q){var toks=q.toLowerCase().split(/\s+/).filter(Boolean);
+ if(!toks.length||q.length<2){close();return;}
+ results=IDX.map(function(a){return{a:a,s:score(a,toks)};}).filter(function(r){return r.s>0;}).sort(function(x,y){return y.s-x.s;}).slice(0,8);
+ active=-1;
+ if(!results.length){box.innerHTML='<div class="sg-foot">No quick matches. Press Enter to search the selected knowledge base.</div>';}
+ else{box.innerHTML=results.map(function(r,i){return '<a class="sg-item" role="option" id="sg-'+i+'" aria-selected="false" href="'+esc(r.a.u)+'"'+(r.a.p==='Rosslare'?' target="_blank" rel="noopener"':'')+'><div class="sg-t">'+hl(r.a.t,toks)+'</div><div class="sg-m"><span class="sg-tag" style="background:'+(r.a.p==='Rosslare'?'#B4232C':'#1A56C4')+'">'+r.a.p+'</span><span>'+esc(r.a.c)+'</span></div><div class="sg-s">'+hl(snippet(r.a,toks),toks)+'</div></a>';}).join('')+'<div class="sg-foot">Press Enter to search the selected knowledge base</div>';}
+ box.hidden=false;input.setAttribute('aria-expanded','true');}
+function move(d){var items=box.querySelectorAll('.sg-item');if(!items.length)return;
+ active=(active+d+items.length)%items.length;items.forEach(function(el,i){el.setAttribute('aria-selected',i===active);});
+ items[active].scrollIntoView({block:'nearest'});input.setAttribute('aria-activedescendant','sg-'+active);}
+input.addEventListener('input',function(){render(input.value.trim());});
+input.addEventListener('focus',function(){if(input.value.trim())render(input.value.trim());});
+input.addEventListener('keydown',function(e){
+ if(box.hidden)return;
+ if(e.key==='ArrowDown'){e.preventDefault();move(1);}
+ else if(e.key==='ArrowUp'){e.preventDefault();move(-1);}
+ else if(e.key==='Escape'){close();}
+ else if(e.key==='Enter'&&active>=0){e.preventDefault();var a=results[active].a;if(a.p==='Rosslare')window.open(a.u,'_blank','noopener');else window.location.href=a.u;}});
+document.addEventListener('click',function(e){if(!document.getElementById('hub-form').contains(e.target))close();});
+})();
+</script>
+</body>
+</html>
